@@ -22,7 +22,7 @@ public class SecondClass {
 		emailId.sendKeys("ganeshktctc@gmail.com");
 		
 		
-		//driver.findElement(By.id("email")).sendKeys("ganeshktctc@gmail.com");
+		driver.findElement(By.id("email")).sendKeys("ganeshktctc@gmail.com");
 		
 		By pass = By.name("pass");
 		 WebElement passWord = driver.findElement(pass);		
