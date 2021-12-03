@@ -2,6 +2,7 @@ package first;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class ThirdClass {
@@ -15,7 +16,7 @@ public class ThirdClass {
 		driver.get("https://www.facebook.com/");
 		
 		
-		driver.findElement(By.partialLinkText("Voting Information")).click();
+		WebElement element = driver.findElement(By.partialLinkText("Voting Information"));
 		driver.findElement(By.linkText("Facebook Lite")).click();
 		
 		
