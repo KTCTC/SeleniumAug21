@@ -13,8 +13,7 @@ System.setProperty("webdriver.chrome.driver", "C:\\Users\\91992\\OneDrive\\Deskt
 		
 		WebDriver driver = new ChromeDriver();			
 		driver.manage().window().maximize();  
-		driver.get("https://demoqa.com/radio-button");
-		
+		driver.get("https://demoqa.com/radio-button");		
 		WebElement yesButton = driver.findElement(By.id("yesRadio"));
 		WebElement noButton = driver.findElement(By.id("noRadio"));
 		boolean f5 = noButton.isDisplayed();
