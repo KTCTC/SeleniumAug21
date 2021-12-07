@@ -24,10 +24,41 @@ public class TablesClass3 {
 		driver.get("http://demo.guru99.com/test/web-table-element.php");
 
 		List<WebElement> rows = driver.findElements(By.xpath("//table[@class='dataTable']/tbody/tr"));
+		
+		for (int i=1; i<=rows.size();i++)
+		{
+			WebElement eachRow = driver.findElement(By.xpath("//table[@class='dataTable']/tbody/tr["+i+"]"));
+			
+			if (Float.parseFloat(eachRow.findElement(By.xpath("td[4]")).getText())>200)
+			{
+				System.out.println(eachRow.findElement(By.xpath("td[1]/a")).getText());
+				System.out.println(eachRow.findElement(By.xpath("td[4]")).getText());
+			}
+			
+		}		
 
 		for (WebElement each : rows) {
 			System.out.println(each.findElement(By.xpath("td[1]/a")).getText());
 			System.out.println(each.findElement(By.xpath("td[4]")).getText());
+		}
+		for (WebElement each : rows) {
+			String cnt = each.findElement(By.xpath("td[4]")).getText();
+			float value = Float.parseFloat(cnt);
+			if (value>200)
+			{
+			System.out.println(each.findElement(By.xpath("td[1]/a")).getText());
+			System.out.println(each.findElement(By.xpath("td[4]")).getText());
+			}
+			
+		}
+		for (WebElement each : rows) {
+			
+			if (Float.parseFloat(each.findElement(By.xpath("td[4]")).getText())>200)
+			{
+			System.out.println(each.findElement(By.xpath("td[1]/a")).getText());
+			System.out.println(each.findElement(By.xpath("td[4]")).getText());
+			}
+			
 		}
 
 	}
