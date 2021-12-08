@@ -20,7 +20,7 @@ public class NaviClass {
 		
 		PropertyHelper obj = new PropertyHelper("Env.properties");
 		
-		driver.get(obj.getPropertyValue("baseURl")+"/text-box");
+		driver.get(obj.getPropertyValue("baseURL")+"/text-box");
 		
 		driver.navigate().to(obj.getPropertyValue("baseURL")+"/text-box");
 		
