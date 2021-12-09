@@ -13,14 +13,16 @@ public class PropertyWritter {
 		// TODO Auto-generated method stub
 		File f = new File(System.getProperty("user.dir")+"\\Env.properties");		
 		FileInputStream fis = new FileInputStream(f);
+		
+		Properties propObj = new Properties();	
+		propObj.load(fis);
+		fis.close();
 		FileOutputStream fos = new FileOutputStream(f);
-		
-		Properties propObj = new Properties();		
-	
 		propObj.setProperty("baseURL", "https://www.javatpoint.com/");
+	
 		
 		
-		propObj.store(fos, "Updated URL");
+		propObj.store(fos, null);
 		
 		
 		
