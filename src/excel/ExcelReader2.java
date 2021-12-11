@@ -47,6 +47,7 @@ public class ExcelReader2 {
 			XSSFCell cel = row.getCell(1);
 			System.out.println(cel.getStringCellValue());
 			
+			
 		}
 		
 		
